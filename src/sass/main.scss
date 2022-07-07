@@ -367,7 +367,6 @@ body._touch .menu__list > li._active .menu__arrow{
         }
         &__icon{
             &._active{
-                margin-right: 22px;
                 span{
                     transform: scale(0);
                 }
@@ -421,7 +420,7 @@ body._touch .menu__list > li._active .menu__arrow{
         }
         &__sub-list{
             flex: 1 1 100%;
-            margin: -15px 0 0 270px;
+            margin: -15px 0 0 150px;
             position: relative;
             display: none;
             background-color: #fff;
