@@ -1,0 +1,27 @@
+a{
+	color: inherit;
+}
+
+html,
+body{
+    height: 100%;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: #142251;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.container{
+    max-width: 1820px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
