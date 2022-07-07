@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrasteia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -23,7 +26,7 @@
                         <nav class="menu__body">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a class="menu__link" data-goto=".main2-1" href="#">
+                                    <a class="menu__link" data-goto=".main" href="#">
                                         Главный
                                     </a>
                                 </li>
@@ -71,12 +74,12 @@
             </div>
         </header>
         <main class="main">
-            <section class="about">
+            <section data-goto=".main" class="about">
                 <div class="container">
                     <div class="about__inner">
                         <div class="about__info">
                             <h2 class="about__title">
-                                Детективно-информационное <span>агентство</span>
+                                Детективно- <br> информационное <span>агентство</span>
                             </h2>
                             <p class="about__text">
                                 Владеешь информацией - владеешь миром
@@ -85,12 +88,22 @@
                                 <a class="button__link" href="#" >Оформить заявку</a>
                             </button>
                         </div>
-                        <img class="about__img" src="img/about-main.png" alt="">
+                        <div class="about__img-block">
+                            <img class="about__img" src="img/about-main.png" alt="">
+                        </div>
                     </div>
-                    <div class="about__message">
-                        <img class="about__message-img" src="" alt="">
-                        <a class="about__message-link" href="">открыть чат</a>
-                        <a class="about__message-link" href="maillo:Adrasteia@mail.com">Adrasteia@mail.com</a>
+                    <button class="button button__lock">
+                        <a class="button__link" href="#" >Оформить заявку</a>
+                    </button>
+                    <div class="about__down">
+                        <a class="about__img-link" href="#">
+                            <img class="about__img-arrow" src="img/about-arrow-down.png" alt="arrow">
+                        </a>
+                        <div class="about__message">
+                            <img class="about__message-img" src="img/about-viber.png" alt="">
+                            <a class="about__message-link touch" href="#">открыть чат</a>
+                            <a class="about__message-link" href="maillo:Adrasteia@mail.com">Adrasteia@mail.com</a>
+                        </div>
                     </div>
                 </div>
             </section>
