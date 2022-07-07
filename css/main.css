@@ -514,10 +514,6 @@ body._touch .menu__list > li._active .menu__arrow {
     transform: scale(1) translate(0px, -50%);
   }
 
-  .menu__icon._active {
-    margin-right: 22px;
-  }
-
   .menu__icon._active span {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -590,7 +586,7 @@ body._touch .menu__list > li._active .menu__arrow {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
-    margin: -15px 0 0 270px;
+    margin: -15px 0 0 150px;
     position: relative;
     display: none;
     background-color: #fff;
