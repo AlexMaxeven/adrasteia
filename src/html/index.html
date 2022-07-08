@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,9 +20,9 @@
                         <img class="header__logo-img" src="img/logo.svg" alt="logo">
                     </a>
                     <div class="header__menu menu">
-                        <div class="menu__icon">
+                        <!-- <div class="menu__icon">
                             <span></span>
-                        </div>
+                        </div> -->
                         <nav class="menu__body">
                             <ul class="menu__list">
                                 <li class="menu__item">
@@ -31,7 +31,7 @@
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">
+                                    <a class="menu__link" data-goto=".mission" href="#">
                                         О нас
                                     </a>
                                 </li>
@@ -67,8 +67,23 @@
                                         Как мы работаем 
                                     </a>
                                 </li>
+                                <li class="menu__item">
+                                    <div class="menu__message">
+                                        <img class="menu__message-img" src="img/viber.svg" alt="">
+                                        <a class="menu__message-link" href="#">Viber</a>
+                                        <img class="menu__message-img" src="img/telegram.svg" alt="">
+                                        <a class="menu__message-link" href="#">Telegram</a>
+                                        <a class="menu__message-mail" href="maillo:Adrasteia@mail.com">Adrasteia@mail.com</a>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
+                    </div>
+                    <button class="button button__header">
+                        <a class="button__link" href="#" >Оформить заявку</a>
+                    </button>
+                    <div class="menu__icon">
+                        <span></span>
                     </div>
                 </div>
             </div>
@@ -103,6 +118,54 @@
                             <img class="about__message-img" src="img/about-viber.png" alt="">
                             <a class="about__message-link touch" href="#">открыть чат</a>
                             <a class="about__message-link" href="maillo:Adrasteia@mail.com">Adrasteia@mail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-goto=".mission" class="mission">
+                <div class="container">
+                    <h2 class="mission__title">
+                        Кто мы?
+                    </h2>
+                    <h5 class="mission__subtitle">
+                        О нас не пишут рейтинговые агентства и поисковые системы
+                    </h5>
+                    <div class="mission__inner">
+                        <div class="mission__box line">
+                            <div class="mission__box-top">
+                                <img class="mission__box-img" src="img/mission-icon-1.svg" alt="">
+                                <p class="mission__box-title">
+                                    заметка 
+                                </p>
+                                <img class="mission__box-img" src="img/mission-icon-2.svg" alt="">
+                            </div>
+                            <p class="mission__box-text">
+                                <span>1.</span> Работаем только 
+                                по рекомендации 
+                                от "своих"
+                            </p>
+                        </div>
+                        <div class="mission__box line">
+                            <img class="mission__box-photo" src="img/missison-img-01.svg" alt="">
+                            <p class="mission__box-text">
+                                <span>2.</span> Применяем 
+                                агентскую сеть 
+                                по всему миру
+                            </p>
+                        </div>
+                        <div class="mission__box line">
+                            <p class="mission__box-text with-photo">
+                                <span>3.</span>
+                                Используем арсенал профессиональных технических средств
+                            </p>
+                            <img class="mission__box-photo mission__box-photo--rewiew" src="img/mission-img-2.png" alt="">
+                        </div>
+                        <div class="mission__box line">
+                            <span class="mission__box-header"></span>
+                            <p class="mission__box-text">
+                                <span>4.</span> Считаем 
+                                что репутация важнее денег
+                            </p>
                         </div>
                     </div>
                 </div>

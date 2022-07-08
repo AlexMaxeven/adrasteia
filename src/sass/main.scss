@@ -21,7 +21,7 @@
         display: flex;
         padding: 0 30px;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         min-height: 80px;
     }
     &__logo {
@@ -30,7 +30,9 @@
 
     &__logo-img {}
 
-    &__menu {}
+    &__menu {
+        margin: auto;
+    }
 }
 
 
@@ -69,7 +71,7 @@
         min-width: 120px;
     }
     &__sub-list > li {
-        margin: 0 0 10px 0;
+        margin: 0 0 22px 0;
         &:last-child{
             margin: 0;
         }
@@ -126,9 +128,43 @@ body._touch .menu__list > li._active .menu__arrow{
 }
 // burger-menu - - -
 
+.menu__item .menu__message{
+    display: none;
+}
+
 .menu{
-    &__icon{
-        display: none;
+    &__message{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        border: 1px solid #DDE0E9;
+        background-color: rgba(33, 56, 135, 0.16);
+        border-right: none;
+        border-left: none;
+        border-radius: 100px;
+        align-items: center;
+        padding: 0px 17px 17px;
+    }
+    &__message-link{
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 17px;
+        display: block;
+        margin-right: auto;
+    }
+    &__message-img{
+        padding-top: 17px;
+        display: block;
+        margin-right: 8px;
+    }
+    &__message-mail{
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 17px;
+        display: block;
+        // margin-left: auto;
     }
 }
 
@@ -234,16 +270,281 @@ body._touch .menu__list > li._active .menu__arrow{
 .button.button__lock{
     display: none;
 }
+.button.button__header{
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 60px;
+    &::after{
+        background-size: contain;
+        left: 77%;
+        top: 28px;
+        width: 14%;
+    }
+}
+// mission - - - 
 
+.mission {
+
+    &__title {
+        padding-top: 100px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 70px;
+        margin-bottom: 12px;
+    }
+
+    &__subtitle {
+        max-width: 500px;
+        text-align: center;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 120%;
+        color: #989EB1;
+        margin-bottom: 100px;
+    }
+
+    &__inner {
+        display: flex;  
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    &__box {
+        margin-left: 0px;
+        padding: 0px 10px;
+        background-color: #C3C7CF;
+        max-width: 370px;
+        background: #F2F3F8;
+        backdrop-filter: blur(40px);
+        border-radius: 22px;
+        &:nth-child(1){
+            transform: rotate(-12deg);
+        }
+        position: relative;
+        &:nth-child(1)::after{
+            content: '';
+            position: absolute;
+            background-image: url('../img/mission-icon-4.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 12px;
+            bottom: 10px;
+            right: 10px;
+        }
+        &:nth-child(2){
+            transform: rotate(0deg);
+            background-color: transparent;
+        }
+        &:nth-child(3){
+            background-color: transparent;
+        }
+        &:nth-child(4){
+            background-color: transparent;
+        }
+    }
+    &__box-header{
+        margin-left: 50px;
+        display: block;
+        height: 50px;
+        width: 150px;
+        background: #FFFFFF;
+        box-shadow: inset 0px 0px 12px #E4E7F1;
+        border-radius: 100px;
+        position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                background-image: url('../img/mission-star.svg');
+                width: 108px;
+                height: 26px;
+                left: 15%;
+                top: 24%;
+            }
+    }
+    &__box-top{
+        border-bottom: 1px solid #E4E7F1;;
+        padding: 27px 0 27px 5px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img:last-child{
+            padding-right: 50px;
+        }
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url('../img/mission-icon-3.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 14px;
+            height: 14px;
+            right: 16px;
+        }
+    }
+
+    &__box-img {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    &__box-title {
+        margin-right: auto;
+    }
+
+    &__box-text {
+        padding: 27px 53px 59px 30px; 
+        font-weight: 400;
+        width: 335px;
+        display: inline-table;
+        font-size: 30px;
+        line-height: 100%;
+        span {
+            display: inline-block;
+            color: #989EB1;
+        }
+    }
+
+    &__box-photo {
+        margin-bottom: -67px;
+        max-width: 100%;
+        display: inline-block;
+    }
+}
+
+.mission__box-text.with-photo{
+    width: 400px;
+}
+.mission__box.line{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: '';
+        background-image: url('../img/mission-icon-5.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -32px;
+        left: 103px;
+        z-index: 10;
+        width: 40px;
+        height: 50px;
+    }
+    &:nth-child(2)::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        top: 83px;
+        transform: rotate(-21deg);
+        left: -276px;
+        height: 1px;
+        background-color: #142251;
+    }
+    &:nth-child(3)::after{
+        position: absolute;
+        content: "";
+        width: 88%;
+        top: -43px;
+        left: -248px;
+        transform: rotate(14deg);
+        height: 1px;
+        background-color: #142251;
+    }
+    &:nth-child(4)::after{
+        position: absolute;
+        content: "";
+        width: 87%;
+        top: 1px;
+        left: -248px;
+        transform: rotate(8deg);
+        height: 1px;
+        background-color: #142251;
+    }
+}
 // - media - - - 
+@media(max-width: 1469px) {
+    .mission__box.line{
+        position: relative;
+        &:nth-child(4)::after{
+            position: absolute;
+            content: "";
+            width: 87%;
+            top: -124px;
+            left: 189px;
+            transform: rotate(-64deg);
+            height: 1px;
+            background-color: #142251;
+        }
+    }
+}
+@media(max-width: 1260px) {
+    .mission__inner{
+        width: 96%;
+    }
+    .header{
+        &__logo-img{
+            max-width: 80%;
+        }
+        &__logo{
+            max-width: 154px;
+        }
+    }
+}
 @media(max-width: 1200px) {
     .about{
         &__title{
             font-size: 55px;
         }
     }
+    .mission{
+        &__title{
+            font-size: 50px;
+        }
+        &__subtitle{
+            font-size: 30px;
+        }
+    }
+}
+@media(max-width: 1180px) {
+    .mission__box.line{
+        position: relative;
+        &:nth-child(3)::after{
+            width: 150%;
+            top: -207px;
+            left: 44px;
+            -webkit-transform: rotate(14deg);
+            -ms-transform: rotate(14deg);
+            transform: rotate(-52deg);
+            position: absolute;
+            content: "";
+            height: 3px;
+            background-color: #142251;
+        }
+        &:nth-child(4)::after{
+            position: absolute;
+            content: "";
+            width: 87%;
+            top: -9px;
+            left: -249px;
+            transform: rotate(4deg);
+            height: 3px;
+            background-color: #142251;
+        }
+    }
 }
 @media(max-width: 1100px) {
+    .menu{
+        &__link{
+            font-size: 17px;
+        }
+    }
+    .button.button__header::after {
+        top: 14px;
+    }
     .about{
         &__title{
             font-size: 45px;
@@ -258,6 +559,7 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 1000px) {
+    
     .header{
         &__inner{
             padding: 0px;
@@ -276,8 +578,17 @@ body._touch .menu__list > li._active .menu__arrow{
         }
     }
 }
-
-@media(min-width: 768px) {
+@media(max-width: 950px) {
+    .button.button__header{
+        display: none;
+    }
+}
+@media(max-width: 950px) {
+    .mission__inner{
+        width: 100%;
+    }
+}
+@media(min-width: 767px) {
     .menu{
         &__list{
             display: flex;
@@ -297,6 +608,59 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 767px) {
+    .mission__box.line::before {
+        display: none;
+    }
+    .mission__box.line:nth-child(2)::after{
+        display: none;
+    }
+    .mission__box.line:nth-child(3)::after{
+        display: none;
+    }
+    .mission__box.line:nth-child(4)::after{
+        display: none;
+    }
+    .mission__box:nth-child(1){
+        transform: rotate(0)
+    }
+    .mission__box-text span {
+        display: none;
+    }
+    .mission{
+        &__box{
+            display: inline;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 10px;
+            &.line{
+                background-color: #F3F6F9;
+                align-items: center;
+                display: flex;
+            }
+            &.line:first-child{
+                background-color: #F3F6F9;
+                align-items: center;
+                display: inline;
+            }
+        }
+        &__text{
+            padding: 2px 53px 59px 30px;
+            margin-top: 66px;
+            font-size: 23px;
+        }
+        &__box-photo{
+            transform: rotate(-17deg);
+            margin-bottom: 0;
+            max-width: 34%;
+        }
+
+    }
+    .button.button__header{
+        display: none;
+    }
+    .menu__item .menu__message{
+        display: flex;
+    }
     .button.button__lock{
         display: inline;
         width: 100%;
@@ -429,6 +793,9 @@ body._touch .menu__list > li._active .menu__arrow{
             font-size: 20px;
             color: #142251;
         }
+        &__sub-item {
+            text-align: right;
+        }
     }
     body._lock{
         overflow: hidden;
@@ -443,14 +810,42 @@ body._touch .menu__list > li._active .menu__arrow{
         align-items: center;
         height: 60px;
         min-height: 60px;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
     .header__logo{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+    .mission__box-photo.mission__box-photo--rewiew{
+        width: 200px;
+        transform: rotate(0deg);
+    }
+    .mission__box-text.with-photo {
+        width: 210px;
+    }
 }
+
+@media(max-width: 580px) {
+    .mission__box.line{
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // padding: 10px 0;
+        min-height: 190px;
+    }
+    .mission__box-text{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .mission__box-header{
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .mission__box-header::after {
+        left: -10%;
+    }
+}
+
 @media(max-width: 560px) {
     .about{
         &__title{
@@ -461,6 +856,38 @@ body._touch .menu__list > li._active .menu__arrow{
         &::after{
             top: 32%;
         }
+    }
+}
+@media(max-width: 460px) {
+    .menu{
+        &__message{
+            justify-content: center;
+        }
+        &__message-link{
+            font-size: 18px;
+            font-weight: 600;
+            padding-top: 17px;
+            display: block;
+            margin-right: 20px;
+        }
+    }
+    .mission__box-photo.mission__box-photo--rewiew {
+        margin-left: -34px;
+    }
+    .mission__box-header{
+        margin-left: 20px;
+    }
+}
+@media(max-width: 450px) {
+    .mission__box-photo.mission__box-photo--rewiew {
+    display: none;
+    }
+    .mission__box-text{
+        width: 100%;
+        padding: 27px 0px 59px 30px;
+    }
+    .about__title {
+        font-size: 43px;
     }
 }
 @media(max-width: 360px) {
