@@ -613,9 +613,156 @@ body._touch .menu__list > li._active .menu__arrow{
         height: 15px;
     }
 }
+// - work - - - 
+
+.work {
+    padding-top: 150px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    background-image: url('../img/work-img.png');
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+    &__inner {}
+
+    &__info {}
+
+    &__title {
+        margin-top: -140px;
+        font-size: 84px;
+        line-height: 100%;
+        margin-bottom: 50px;
+    }
+
+    &__box {
+        max-width: 454px;
+        border: 1px solid #989EB1;
+        border-radius: 22px;
+        padding: 40px 70px 30px 37px;
+        margin-bottom: 10px;
+        position: relative;
+        &::after{
+            font-size: 20px;
+            color: #989EB1;
+            opacity: 0.5;
+            position: absolute;
+            content: '03';
+            top: 20%;
+            left: 90%;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__box-mobile {
+        display: none;
+    }
+
+    &__box-img {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__box-text {
+        font-size: 30px;
+        line-height: 120%;
+        color: #989EB1;
+    }
+
+    &__img {}
+}
+.work__box:nth-child(2)::after{
+    content: '01';
+}
+.work__box:nth-child(3)::after{
+    content: '02';
+}
+// - clients - - -
+.clients {
+
+    padding: 60px 0px;
+    background-color: #F3F6F9;
+    // background-image: url('../img/clients-img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 84px;
+        line-height: 90%;
+        padding-right: 20px;
+    }
+
+    &__info {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__box {
+        width: 438px;
+        height: 438px;
+        background: #FFFFFF;
+        border-radius: 44px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box-text {
+        margin-top: auto;
+        padding: 0px 0px 44px 44px;
+        font-size: 34px;
+        line-height: 140%;
+        color: #989EB1;
+    }
+
+    &__box-img {
+        margin: 20px 20px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 136px;
+        height: 136px;
+        background: #F2F3F8;
+        border-radius: 40px;
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__text {
+        margin-left: 20px;
+        max-width: 355px;
+        font-size: 34px;
+        line-height: 120%;
+        color: #989EB1;
+    }
+}
 
 
 // - media - - - 
+@media(max-width: 1600px) {
+    .clients{
+        &__inner{
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        &__text{
+            margin-bottom: 40px;
+            order: -1;
+        }
+        &__title{
+            order: -2;
+        }
+    }
+    
+}
 @media(max-width: 1469px) {
     .mission__box.line{
         position: relative;
@@ -645,6 +792,10 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 1200px) {
+    .work{
+        background-size: cover;
+        background-position: top left;
+    }
     .about{
         &__title{
             font-size: 55px;
@@ -747,6 +898,25 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 950px) {
+    .clients{
+        &__inner{
+            justify-content: left;
+        }
+        &__title{
+            margin-bottom: 30px;
+            font-size: 70px;
+        }
+        &__box{
+            width: 338px;
+            height: 338px;
+        }
+        &__info{
+            margin: 0 auto;
+        }
+        &__box-text{
+            max-width: 148px;
+        }
+    }
     .button.button__header{
         display: none;
     }
@@ -785,9 +955,57 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 767px) {
+    .clients{
+        &__title{
+            font-size: 45px;
+        }
+        &__text{
+            font-size: 30px;
+        }
+        &__box{
+            width: 272px;
+            height: 272px;
+        }
+        &__box-img{
+            width: 136px;
+            height: 75px;
+        }
+    }
+    .work{
+        margin-bottom: 115px;
+        padding-top: 150px;
+        background-image: none;
+        &__title{
+            font-size: 45px;
+            line-height: 85%;
+            margin-bottom: 30px;
+            br {
+                display: none;
+            }
+        }
+        &__box-mobile{
+            display: inline-block;
+        }
+        &__box-img{
+            display: none;
+        }
+        &__box{
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+        &__box-text{
+            max-width: 250px;
+            padding-left: 100px;
+        }
+    }
     .mission{
         &__inner{
             padding-bottom: 0px;
+        }
+        &__title{
+            padding-top: 35px;
         }
     }
     .slick-next, 
@@ -1030,6 +1248,27 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 
+@media(max-width: 601px) {
+    .clients{
+        &__info{
+            display: block;
+        }
+        &__box{
+            margin-bottom: 20px;
+        }
+        &__text{
+            max-width: 300px;
+            font-size: 25px;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        &__title{
+            margin: 0 auto 20px;
+            text-align: center;
+
+        }
+    }
+}
 @media(max-width: 580px) {
     .mission__box.line{
         // flex-wrap: wrap;
@@ -1073,6 +1312,11 @@ body._touch .menu__list > li._active .menu__arrow{
         max-width: 300px;
         margin: 5px;
     }
+    .work{
+        &__box-text{
+            padding-left: 10px;
+        }
+    }
 }
 @media(max-width: 460px) {
     .menu{
@@ -1104,6 +1348,11 @@ body._touch .menu__list > li._active .menu__arrow{
     }
     .about__title {
         font-size: 43px;
+    }
+    .work{
+        &__box-text{
+            font-size: 18px;
+        }
     }
 }
 @media(max-width: 360px) {
