@@ -1,3 +1,51 @@
+// - - - slick-carousel - - - 
+import $ from "jquery";
+import "slick-carousel";
+
+$(".services__inner").slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    touchThreshold: 10,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    responsive: [
+        {
+        breakpoint: 1770,
+        settings: {
+            slidesToShow: 3,
+            // slidesToScroll: 3,
+            // infinite: true,
+            // dots: true
+            }
+        },
+        {
+        breakpoint: 1350,
+        settings: {
+            slidesToShow: 2,
+            // slidesToScroll: 2
+            }
+        },
+        {
+        breakpoint: 900,
+        settings: {
+            slidesToShow: 2
+            // slidesToScroll: 1
+            }
+        },
+        {
+        breakpoint: 700,
+        settings: {
+            slidesToShow: 1
+            // slidesToScroll: 1
+            }
+        }
+    ]
+});
+
+// - - - touch - pc -
 const isMobile = {
     Android: function () {
         return navigator.userAgent.match(/Android/i);

@@ -1,3 +1,4 @@
+// @import "./libs/slick.scss";
 // reset -
 @import 'reset';
 // global -
@@ -284,7 +285,7 @@ body._touch .menu__list > li._active .menu__arrow{
 // mission - - - 
 
 .mission {
-
+    margin-bottom: 100px;
     &__title {
         padding-top: 100px;
         text-align: center;
@@ -465,6 +466,155 @@ body._touch .menu__list > li._active .menu__arrow{
         background-color: #142251;
     }
 }
+// - services - - - 
+
+.services {
+    background-color: #F3F6F9;
+    padding-bottom: 50px;
+    &__info {
+        align-items: center;
+        display: flex;
+        padding-top: 100px;
+        padding-bottom: 80px;
+        justify-content: space-between;
+        span {
+            display: block;
+            width: 140px;
+            height: 60px;
+            max-height: 100%;
+            max-width: 100%;
+            background: #FFFFFF;
+            border-radius: 100px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 32px;
+                left: 50%;
+                top: 25%;
+                background: #E4E7F1;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 94px;
+        line-height: 100%;
+    }
+
+    &__subtitle {
+        max-width: 325px;
+        font-size: 30px;
+        line-height: 120%;
+        color: #989EB1;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    &__box {
+        min-width: 425px;
+        min-height: 517px;
+        padding: 10px 10px 40px 10px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        max-width: 425px;
+        margin: 5px;
+    }
+    &__text{
+        text-align: left;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 90%;
+        color: #142251;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &__box-list {
+        text-align: left;
+    }
+
+    &__box-item {
+        font-size: 17px;
+        line-height: 100%;
+        margin-bottom: 10px;
+        color: #142251;
+    }
+}
+.button.button__services{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: #142251;
+    color: #FFFFFF;
+    &::after{
+        content: '';
+        background-image: url(../img/services-btn.svg);
+        background-repeat: no-repeat;
+        width: 50px;
+    }
+}
+// - slick -slider - - - 
+
+.slick-prev{
+    position: absolute;
+    top: -135px;
+    right: 90px;
+    font-size: 0;
+    background-image: url('../img/arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 21px;
+    transform: rotate(-180deg);
+}
+.slick-next{
+    position: absolute;
+    top: -135px;
+    right: 25px;
+    font-size: 0;
+    background-image: url('../img/arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 21px;
+}
+.slick-dots {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    button {
+        font-size: 0;
+        width: 20px;
+        height: 5px;
+        background-color: #142251;
+    }
+    li {
+        margin: 10px;
+    }
+}
+.slick-slider{
+    text-align: center;
+}
+.slick-active{
+    button {
+        border-radius: 50%;
+        height: 15px;
+    }
+}
+
+
 // - media - - - 
 @media(max-width: 1469px) {
     .mission__box.line{
@@ -508,8 +658,26 @@ body._touch .menu__list > li._active .menu__arrow{
             font-size: 30px;
         }
     }
+    .services {
+        &__title{
+            font-size: 70px;
+        }
+        &__subtitle{
+            font-size: 24px;
+        }
+    }
+    .slick-next,
+    .slick-prev{
+        top: -126px;
+    }
+
 }
-@media(max-width: 1180px) {
+@media(max-width: 1182px) {
+    .mission{
+        &__inner{
+            padding-bottom: 100px;
+        }
+    }
     .mission__box.line{
         position: relative;
         &:nth-child(3)::after{
@@ -521,7 +689,7 @@ body._touch .menu__list > li._active .menu__arrow{
             transform: rotate(-52deg);
             position: absolute;
             content: "";
-            height: 3px;
+            height: 1px;
             background-color: #142251;
         }
         &:nth-child(4)::after{
@@ -531,7 +699,7 @@ body._touch .menu__list > li._active .menu__arrow{
             top: -9px;
             left: -249px;
             transform: rotate(4deg);
-            height: 3px;
+            height: 1px;
             background-color: #142251;
         }
     }
@@ -582,6 +750,15 @@ body._touch .menu__list > li._active .menu__arrow{
     .button.button__header{
         display: none;
     }
+    .services__box {
+        background: #fff;
+        min-width: 300px;
+        min-height: 453px;
+        padding: 10px 10px 40px;
+        border-radius: 40px;
+        max-width: 300px;
+        margin: 5px;
+    }
 }
 @media(max-width: 950px) {
     .mission__inner{
@@ -608,6 +785,33 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 767px) {
+    .mission{
+        &__inner{
+            padding-bottom: 0px;
+        }
+    }
+    .slick-next, 
+    .slick-prev {
+        top: -56px;
+    }
+    .services{
+        &__info{
+            display: block;
+            padding-top: 35px;
+            padding-bottom: 15px;
+            span {
+                margin-left: auto;
+            }
+        }
+        &__title{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        &__subtitle{
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+    }
     .mission__box.line::before {
         display: none;
     }
@@ -857,6 +1061,18 @@ body._touch .menu__list > li._active .menu__arrow{
             top: 32%;
         }
     }
+    
+}
+@media(max-width: 500px) {
+    .services__box {
+        background: #fff;
+        min-width: 300px;
+        min-height: 436px;
+        padding: 10px 10px 40px;
+        border-radius: 40px;
+        max-width: 300px;
+        margin: 5px;
+    }
 }
 @media(max-width: 460px) {
     .menu{
@@ -891,6 +1107,25 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 360px) {
+    .services{
+        &__box-item{
+            font-size: 15px;
+        }
+        &__text{
+            font-size: 28px;
+        }
+    }
+    .services__box {
+        background: #fff;
+        min-width: 253px;
+        min-height: 384px;
+        padding: 10px 10px 40px;
+        border-radius: 40px;
+        max-width: 244px;
+        margin: 5px;
+    }
+}
+@media(max-width: 360px) {
     .about{
         &__title{
             font-size: 35px;
@@ -902,5 +1137,10 @@ body._touch .menu__list > li._active .menu__arrow{
         }
     }
 }
-// - slick scss
-// @import "./libs/slick.scss";
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+// - slick scss - swiper - - -
+@import "./libs/slick.scss";
