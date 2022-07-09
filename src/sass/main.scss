@@ -682,10 +682,10 @@ body._touch .menu__list > li._active .menu__arrow{
 
     padding: 60px 0px;
     background-color: #F3F6F9;
-    // background-image: url('../img/clients-img.png');
-    background-size: contain;
+    background-image: url('../img/clients-img.png');
+    // background-size: ;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: bottom right;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -743,6 +743,121 @@ body._touch .menu__list > li._active .menu__arrow{
         line-height: 120%;
         color: #989EB1;
     }
+}
+
+// - connection - - - 
+
+.connection {
+    padding-top: 90px;
+    &__subtitle{
+        font-size: 84px;
+        line-height: 100%;
+        margin-bottom: 120px;
+    }
+    &__title {
+        font-size: 34px;
+        line-height: 100%;
+        margin-right: 5px;
+        min-width: 180px;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        border-bottom: 1px solid #E4E7F1;
+        padding-bottom: 50px;
+    }
+
+    &__name {
+        align-items: center;
+        display: flex;
+        // max-width: 600px;
+        justify-content: space-between;
+    }
+
+    &__number {
+        // max-width: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__mail {
+        // max-width: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__input{
+        padding: 13px 0 13px 10px;
+        margin-right: auto;
+        width: 100%;
+        font-size: 24px;
+        line-height: 100%;
+        color: #213887;
+        max-width: 450px;
+        border-bottom: 1px solid #213887;
+        &::placeholder{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.03em;
+            color: #989EB1;
+        }
+    }
+
+    &__form {
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__form-text {
+        max-width: 140px;
+        color: #989EB1;
+    }
+}
+
+.button.button__bottom{
+    padding: 23px 68px 22px 15px;
+    &::after{
+        width: 43px;
+        height: 43px;
+        top: 20%;
+    }
+}
+
+.footer {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__copy {
+        padding-left: 5px;
+    }
+
+    &__design {
+        padding-left: 5px;
+
+    }
+
+    &__text {
+        padding-left: 5px;
+
+    }
+}
+
+.menu__message.footer__message{
+    max-width: 383px;
+    margin-top: 0;
 }
 
 
@@ -934,6 +1049,22 @@ body._touch .menu__list > li._active .menu__arrow{
     .mission__inner{
         width: 100%;
     }
+    .connection{
+        &__title{
+            font-size: 24px;
+            min-width: 120px;
+        }
+        &__input{
+            &::placeholder{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media(max-width: 800px) {
+    .connection__form-text {
+        max-width: 130px;
+    }
 }
 @media(min-width: 767px) {
     .menu{
@@ -955,12 +1086,42 @@ body._touch .menu__list > li._active .menu__arrow{
     }
 }
 @media(max-width: 767px) {
+    .menu__message.footer__message{
+        display: none;
+    }
+    .footer__copy,
+    .footer__text,
+    .footer__design{
+        padding: 0 5px;
+    }
+    .button.button__bottom{
+        display: block;
+        max-width: 100%;
+    }
+
+    .connection{
+        &__subtitle{
+            font-size: 45px;
+            max-width: 200px;
+            margin-bottom: 30px;
+        }
+        &__title{
+            display: none;
+        }
+        &__inner{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__input{
+            max-width: 100%;
+        }
+    }
     .clients{
+        border-radius: 30px;
         &__title{
             font-size: 45px;
         }
         &__text{
-            font-size: 30px;
+            font-size: 24px;
         }
         &__box{
             width: 272px;

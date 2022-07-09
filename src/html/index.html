@@ -46,19 +46,19 @@
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">
+                                    <a class="menu__link" data-goto=".connection" href="#">
                                         Контакты
                                     </a>
                                     <span class="menu__arrow"></span>
                                     <ul class="menu__sub-list">
                                         <li class="menu__sub-item">
-                                            <a href="" class="menu__sub-link">Номер</a>
+                                            <a href="#" class="menu__sub-link" data-goto=".connection">Номер</a>
                                         </li>
                                         <li class="menu__sub-item">
-                                            <a href="" class="menu__sub-link">Телефон</a>
+                                            <a href="#" class="menu__sub-link" data-goto=".connection">Телефон</a>
                                         </li>
                                         <li class="menu__sub-item">
-                                            <a href="" class="menu__sub-link">Почта</a>
+                                            <a href="#" class="menu__sub-link" data-goto=".connection">Почта</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -377,9 +377,63 @@
                     </div>
                 </div>
             </section>
+            <section data-goto=".connection" class="connection">
+                <div class="container">
+                    <h3 class="connection__subtitle">
+                        Связаться с нами
+                    </h3>
+                    <div class="connection__inner">
+                        <div class="connection__name">
+                            <p class="connection__title">
+                                Меня зовут
+                            </p>
+                            <input class="connection__input" type="text" placeholder="Караникола Евгений">
+                        </div>
+                        <div class="connection__number">
+                            <p class="connection__title">
+                                Мой номер
+                            </p>
+                            <input class="connection__input" type="text" placeholder="+7 (___) ___-____.">
+                        </div>
+                        <div class="connection__mail">
+                            <p class="connection__title">
+                                Мой email
+                            </p>
+                            <input class="connection__input" type="text" placeholder="example@gmail.com">
+                        </div>
+                        <div class="connection__form">
+                            <p class="connection__form-text">
+                                Согласие на обработку персональных данных
+                            </p>
+                            <button class="button button__bottom">
+                                <a class="button__link" href="#" >Оформить заявку</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
-            
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="menu__message footer__message">
+                        <img class="menu__message-img" src="img/viber.svg" alt="">
+                        <a class="menu__message-link" href="#">Viber</a>
+                        <img class="menu__message-img" src="img/telegram.svg" alt="">
+                        <a class="menu__message-link" href="#">Telegram</a>
+                        <a class="menu__message-mail" href="maillo:Adrasteia@mail.com">Adrasteia@mail.com</a>
+                    </div>
+                    <a href="#" class="footer__copy">
+                        Политика конфиденциальности
+                    </a>
+                    <a href="#" class="footer__design">
+                        Дизайн и разработка - Karanikola
+                    </a>
+                    <p class="footer__text">
+                        © 2022
+                    </p>
+                </div>
+            </div>
         </footer>
     </div>
     
