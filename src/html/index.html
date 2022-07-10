@@ -20,9 +20,6 @@
                         <img class="header__logo-img" src="img/logo.svg" alt="logo">
                     </a>
                     <div class="header__menu menu">
-                        <!-- <div class="menu__icon">
-                            <span></span>
-                        </div> -->
                         <nav class="menu__body">
                             <ul class="menu__list">
                                 <li class="menu__item">
@@ -80,7 +77,7 @@
                         </nav>
                     </div>
                     <button class="button button__header">
-                        <a class="button__link" href="#" >Оформить заявку</a>
+                        <a class="button__link popup-link" href="#popup" >Оформить заявку</a>
                     </button>
                     <div class="menu__icon">
                         <span></span>
@@ -100,7 +97,7 @@
                                 Владеешь информацией - владеешь миром
                             </p>
                             <button class="button">
-                                <a class="button__link" href="#" >Оформить заявку</a>
+                                <a class="button__link popup-link" href="#popup" >Оформить заявку</a>
                             </button>
                         </div>
                         <div class="about__img-block">
@@ -108,7 +105,7 @@
                         </div>
                     </div>
                     <button class="button button__lock">
-                        <a class="button__link" href="#" >Оформить заявку</a>
+                        <a class="button__link popup-link" href="#popup" >Оформить заявку</a>
                     </button>
                     <div class="about__down">
                         <a data-goto=".mission" class="about__img-link" href="#">
@@ -295,7 +292,7 @@
                         </div>
                     </div>
                     <button class="button button__services">
-                        <a class="button__link" href="#" >Оформить заявку</a>
+                        <a class="button__link popup-link" href="#popup" >Оформить заявку</a>
                     </button>
                 </div>
             </section>
@@ -304,7 +301,7 @@
                     <div class="work__inner">
                         <div class="work__info">
                             <h3 class="work__title">
-                                Как мы <br> работаем
+                                Как мы <br>работаем
                             </h3>
                             <div class="work__box">
                                 <img src="img/work-mobile1.png" alt="" class="work__box-mobile">
@@ -393,7 +390,7 @@
                             <p class="connection__title">
                                 Мой номер
                             </p>
-                            <input class="connection__input" type="text" placeholder="+7 (___) ___-____.">
+                            <input class="connection__input" type="number" placeholder="+7 (___) ___-____.">
                         </div>
                         <div class="connection__mail">
                             <p class="connection__title">
@@ -406,12 +403,57 @@
                                 Согласие на обработку персональных данных
                             </p>
                             <button class="button button__bottom">
-                                <a class="button__link" href="#" >Оформить заявку</a>
+                                <a class="button__link popup-link" href="#popup-2" >Оформить заявку</a>
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
+            <div id="popup" class="popup">
+                <div class="container">
+                    <div class="popup__body">
+                        <h2 class="popup__subtitle">
+                            Оставить заявку
+                        </h2>
+                        <a class="popup__close close-popup" href="#">X</a>
+                        <div class="popup__inner">
+                            <div class="popup__form">
+                                <div class="popup__name">
+                                    <p class="popup__title">
+                                        Меня зовут
+                                    </p>
+                                    <input class="popup__input" type="text" placeholder="Меня зовут">
+                                </div>
+                                <div class="popup__name">
+                                    <p class="popup__title">
+                                        Мой email
+                                    </p>
+                                    <input class="popup__input" type="text" placeholder="example@gmail.com">
+                                </div>
+                                <div class="popup__name">
+                                    <p class="popup__title">
+                                        Мой номер
+                                    </p>
+                                    <input class="popup__input" type="text" placeholder="Мой номер">
+                                </div>
+                            </div>
+                            <div class="popup__comment">
+                                <h3 class="popup__comment-title">Комментарий</h3>
+                                <p class="popup__comment-text">
+                                    Здесь вы можете оставить 
+                                    комментарий если посчитаете
+                                    нужным это сделать
+                                </p>
+                                <input class="popup__input" type="text" placeholder="Комментарий">
+                            </div>
+                        </div>                 
+                            <button class="button button__popup " type="submit">
+                                Отправить форму
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <div class="container">
